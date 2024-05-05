@@ -1,31 +1,32 @@
+import css from "./Options.module.css";
 export default function Options({
   updateFeedback,
   totalFeedback,
   resetFeedback,
 }) {
   return (
-    <div>
+    <div className={css.container}>
       <button
         onClick={() => updateFeedback("good")}
         type="button"
       >
-        good
+        Good
       </button>
       <button
         onClick={() => updateFeedback("neutral")}
         type="button"
       >
-        neutral
+        Neutral
       </button>
       <button
         onClick={() => updateFeedback("bad")}
         type="button"
       >
-        bad
+        Bad
       </button>
       {totalFeedback > 0 && (
         <button onClick={resetFeedback} type="reset">
-          reset
+          Reset
         </button>
       )}
     </div>
